@@ -10,6 +10,8 @@ import { MoviesHomeComponent } from './components/movies-home/movies-home.compon
 import { AddMoviesComponent } from './components/add-movies/add-movies.component';
 import { ButtonComponent } from './components/button/button.component';
 import { MovieTileComponent } from './components/movie-tile/movie-tile.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,6 +27,8 @@ import { MovieTileComponent } from './components/movie-tile/movie-tile.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
