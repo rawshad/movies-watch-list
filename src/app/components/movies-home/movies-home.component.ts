@@ -23,6 +23,12 @@ export class MoviesHomeComponent implements OnInit {
   }
 
   ngDoCheck() {
-    console.log('movies', this.movies);
+    if (this.movies.length && !this.watchedMovies.length) {
+      this.yetToWatchMovies = this.movies.filter((m) => !m.isFav && !m.isWatched);
+      this.watchedMovies = this.movies.filter((m) => m.isWatched);
+    }
   }
+
+  onFavClick(movie: Movies): void {}
+  onWatchedClick(movie: Movies): void {}
 }
