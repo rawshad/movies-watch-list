@@ -18,7 +18,7 @@ export class MoviesService {
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<Movies[]> {
-    return this.http.get<Movies[]>(`${this.baseApiUrl}`);
+    return this.http.get<Movies[]>(this.baseApiUrl);
   }
 
   updateMovie(movie: Movies): Observable<Movies> {
@@ -30,4 +30,4 @@ export class MoviesService {
     const url = `${this.baseApiUrl}`;
     return this.http.post<Movies>(url, movie, httpOptions);
   }
-}
+} 

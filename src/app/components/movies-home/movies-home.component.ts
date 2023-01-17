@@ -13,16 +13,16 @@ export class MoviesHomeComponent implements OnInit {
   watchedMovies: Movies[] = [];
 
 
-  constructor (private movieService : MoviesService) {
+  constructor (private moviesService : MoviesService) {
     
   }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe((movies) => this.movies = movies);
+    this.moviesService.getMovies().subscribe((movies) => this.movies = movies);
     console.log('movies', this.movies);
   }
 
-  ngDocheck() {
+  ngDoCheck() {
     console.log('movies', this.movies);
   }
 }
