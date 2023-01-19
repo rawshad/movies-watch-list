@@ -1,1 +1,8 @@
-<p>add-movies works!</p>
+<div class="add-movie">
+    <form class="add-movie-form" (ngSubmit)="onSubmit()">
+        <div class="form-control">
+            <label for="movieTitle">Movie Name</label>
+            <input type="text" name="movieTitle" [(ngModel)] = "movieTitle" id="movieTitle" placeholder="Add Movie Name">
+        </div>
+    </form>
+</div>
